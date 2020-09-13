@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <PageTitle icon="fa fa-home" main="Dashboard"
-            sub="Base Teste" />
+            sub="Home do Sistema" />
     </div>
 </template>
 
