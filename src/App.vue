@@ -1,6 +1,9 @@
 <template>
 	<div id="app" :class="{'hide-menu' : !isMenuVisible}">
-		<Header title="Lab Leite - Escola Agrícola de Jundiaí/UFRN" :hideToggle="false"/>
+		<Header title="Lab Leite - Escola Agrícola de Jundiaí/UFRN" 
+			:hideToggle="false"
+			:hideUserDropdown="false"
+			/>
 		<Menu />
 		<Content />
 		<Footer />
