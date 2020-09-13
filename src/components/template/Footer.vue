@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <span>Copyright <strong>Lab Leite</strong> © 2020</span>
+        <span>Copyright<strong> Lab-Leite </strong>© 2020</span>
     </footer>
 </template>
 
@@ -11,9 +11,9 @@ export default {
 </script>
 
 <style>
-    .footer{
+    .footer {
         grid-area: footer;
-        background: #DDD;
+        background-color: #DDD;
         color: #333;
 
         display: flex;
