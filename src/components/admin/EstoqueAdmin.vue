@@ -14,6 +14,7 @@
                 <b-col md="6" ms="12">
                     <b-form-group label="Unidade de Medida" label-for="estoque-unidade">
                         <b-form-select
+                            id="stoque-unidade"
                             v-model="selected"
                             :options="options"
                             class="mb-3"
