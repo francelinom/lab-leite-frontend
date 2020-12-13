@@ -1,10 +1,10 @@
 <template>
-	<div id="app" :class="{'hide-menu' : !isMenuVisible}">
+	<div id="app" :class="{'hide-menu' : isMenuVisible}">
 		<Header title="Lab Leite - Escola Agrícola de Jundiaí/UFRN" 
 			:hideToggle="false"
 			:hideUserDropdown="false"
 			/>
-		<Menu />
+		<Menu/>
 		<Content />
 		<Footer />
 	</div>
@@ -13,13 +13,13 @@
 <script>
 import { mapState } from 'vuex'
 import Header from "@/components/template/Header"
-import Menu from "@/components/template/Menu"
 import Content from "@/components/template/Content"
 import Footer from "@/components/template/Footer"
+import Menu from "@/components/template/Menu"
 
 export default {
 	name: "App",
-	components: {Header, Menu, Content, Footer},
+	components: {Header, Content, Footer, Menu},
 	computed: mapState(['isMenuVisible'])
 }
 </script>
@@ -52,5 +52,4 @@ export default {
 			"content content"
 			"footer footer";
 	}
-
 </style>

@@ -1,38 +1,54 @@
 {
   "name": "frontend",
-  "jest": {
-    "verbose": true
-  },
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build, babel src -d lib",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "test": "jest"
+    "test": "jest",
+    "start": "node server.js"
   },
   "dependencies": {
     "axios": "0.18.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
     "bootstrap-vue": "2.0.0-rc.11",
+    "chart.js": "^2.9.4",
+    "express": "^4.17.1",
     "font-awesome": "4.7.0",
     "highlightjs": "9.10.0",
+    "jspdf": "^2.1.1",
+    "jspdf-autotable": "^3.5.13",
+    "jwt-decode": "^3.1.2",
     "liquor-tree": "0.2.32",
+    "request": "^2.88.2",
+    "serve-static": "^1.14.1",
     "vue": "2.5.17",
+    "vue-chartkick": "^0.6.1",
     "vue-gravatar": "1.2.1",
     "vue-mq": "0.2.1",
     "vue-router": "3.0.1",
     "vue-toasted": "1.1.24",
     "vue2-editor": "2.6.6",
+    "vuelidate": "^0.7.5",
     "vuex": "3.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
     "@vue/cli-plugin-babel": "3.0.1",
     "@vue/cli-plugin-eslint": "3.0.1",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "3.0.1",
+    "@vue/test-utils": "^1.1.0",
+    "babel-jest": "^26.5.2",
+    "cypress": "^5.3.0",
     "jest": "^26.4.2",
-    "vue-template-compiler": "2.5.17",
-    "vue-test-utils": "^1.0.0-beta.11"
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "2.5.17"
   },
   "eslintConfig": {
     "root": true,
@@ -46,11 +62,63 @@
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      },
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      },
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      },
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   },
   "postcss": {
     "plugins": {
       "autoprefixer": {}
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(js)$": "babel-jest"
     }
   },
   "browserslist": [

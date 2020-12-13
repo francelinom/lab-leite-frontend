@@ -5,10 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        isMenuVisible: true,
+        isMenuVisible: false,
         user: {
-            name: 'Usuário Lab Leite',
-            email: 'lab-leite@gmail.com'
+            username: ''
         }
     },
     mutations: {
@@ -17,6 +16,13 @@ export default new Vuex.Store({
                 state.isMenuVisible = !state.isMenuVisible
             } else {
                 state.isMenuVisible = isVisible
+            }
+        },
+        setUser(state, user){
+            if(user !== null){
+                state.user = user
+            }else{
+                state.user = {}
             }
         }
     }

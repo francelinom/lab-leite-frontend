@@ -1,5 +1,5 @@
 <template>
-    <div class="page-title">
+    <div class="page-title shadow p-3 mb-5 bg-white rounded">
         <h1><i v-if="icon" :class="icon"></i>{{main}}</h1>
         <h2>{{sub}}</h2>
         <hr>
@@ -23,4 +23,5 @@ export default {
         margin: 5px;
         font-size: 1.3rem;
     }
+  
 </style>
